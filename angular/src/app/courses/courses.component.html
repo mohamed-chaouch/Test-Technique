@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row py-5">
+        <h1 class="col-10">Discover Our Courses</h1>
+        <button class="btn2 border-0 mx-3 col">ViewMore</button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card col-4 my-4 border-0" *ngFor="let i of courses">
+                <img class="img-top w-100 hei" [src]="'http://localhost:3000/getimage/' + i.image" alt="">
+                <div>
+                    <h4 class="pt-3 ps-3">{{i.titre}}</h4>
+                    <h5 class="coul py-3 ps-4"> {{i.prix}} DT / Month </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

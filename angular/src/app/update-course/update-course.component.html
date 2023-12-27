@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="mar1">
+        <h3 class="text-center">Update Cour</h3>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="image"><strong class="te">Image</strong></label>
+                <input (change)="selectedImage($event)" [(ngModel)]="image" name="image" class="form-control rad" id="image" type="file">
+            </div>
+            <div class="form-group">
+                <label for="titre"><strong class="te">TITRE</strong></label>
+                <input  [(ngModel)]="cour.titre" name="titre" class="form-control rad" id="titre" type="text" placeholder="Spring Boot / Angular">
+            </div>
+            <div class="form-group">
+                <label for="prix"><strong class="te">PRIX</strong></label>
+                <input  [(ngModel)]="cour.prix" name="prix" class="form-control rad" id="prix" type="number">
+            </div>
+            
+            <div class="form-group pt-2 text-center">
+                <button (click)="updateCour()" class="border-0 btn1 text-center">Update</button>
+            </div>
+        </form>
+    </div>
+    
+</div>

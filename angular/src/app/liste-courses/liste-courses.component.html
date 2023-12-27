@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-striped">
+        <tr class="row te py-5">
+            <th class="col-3">Titre</th>
+            <th class="col-1">Prix</th>
+            <th class="col-4">Image</th>
+            <th class="col-2">Update</th>
+            <th class="col-2">Delete</th>
+        </tr>
+        <tr>
+            <div class="row py-3" *ngFor="let i of cours">
+                <td class="col-3"> {{i.titre}} </td>
+                <td class="col-1"> {{i.prix}} </td>
+                <td class="col-4"><img class="img" [src]="'http://localhost:3000/getimage/' + i.image" alt=""></td>
+                <td class="col-2"><button class="btn btn-primary" [routerLink]="['/updateCourse' , i._id]">Update</button></td>
+                <td class="col-2"><button class="btn btn-danger" (click)="deleteCour(i._id)">Delete</button></td>
+            </div>
+        </tr>
+    </table>
+</div>

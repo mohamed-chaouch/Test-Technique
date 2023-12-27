@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="mar">
+        <h3 class="text-center">Login Admin</h3>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="email"><strong class="te">EMAIL</strong></label>
+                <input [(ngModel)]="loginAdmin.email" name="email" class="form-control rad" id="email" type="email" placeholder="hello@reallygreatsite.com">
+            </div>
+            <div class="form-group">
+                <label for="password"><strong class="te">PASSWORD</strong></label>
+                <input  [(ngModel)]="loginAdmin.password" name="password" class="form-control rad" id="password" type="password" placeholder="************">
+            </div>
+            
+            
+        <div class="form-group pt-2 text-center">
+            <button (click)="login()" class="border-0 btn1 text-center">Login</button>
+            </div>
+        </form>
+        <p class="couleur text-center"> {{resultat}} </p>
+    </div>
+    
+</div>
